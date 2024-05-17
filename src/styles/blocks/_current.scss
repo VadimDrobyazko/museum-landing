@@ -1,0 +1,96 @@
+.current {
+  margin: 20px 0 0;
+
+  @include on-table {
+    margin: 44px 0 0;
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__text {
+    @include ff-plexsans;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: $c-main-text;
+
+    @include on-table {
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+
+  &__date {
+    @include ff-plexsans;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: $c-green;
+
+    @include on-table {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  &__title {
+    position: relative;
+
+    @include ff-montserrat;
+
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 28px;
+
+    color: $c-main-title;
+
+    margin: 10px 0 0;
+    width: max-content;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: $c-main-red;
+
+      top: 55%;
+      right: -12%;
+
+      transform: translate(-50%, -50%);
+
+      @include on-table {
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    @include on-table {
+      margin: 30px 0 0;
+      font-size: 36px;
+      line-height: 36px;
+    }
+  }
+
+  &__subtitle {
+    @include ff-plexsans;
+
+    font-size: 16px;
+    line-height: 24px;
+    color: $c-main-desc;
+
+    width: 100%;
+    margin: 10px 0 0;
+
+    @include on-table {
+      margin: 15px 0 0;
+    }
+  }
+}

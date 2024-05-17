@@ -1,0 +1,22 @@
+.container {
+  padding: 27px 20px 0;
+  margin: 0 auto;
+  max-width: 1170px;
+
+  @include on-table {
+    padding: 39px 39px 0;
+  }
+
+  @include on-desktop {
+    padding: 39px 55px;
+    width: auto;
+  }
+
+  @include on-design {
+    max-width: 2450px;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}

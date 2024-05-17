@@ -1,3 +1,26 @@
+@import "utils/mixins";
+@import "utils/vars";
+@import "utils/reset";
+@import "blocks/container";
+@import "blocks/header";
+@import "blocks/tickets";
+@import "blocks/events";
+@import "blocks/current";
+@import "blocks/lections";
+@import "blocks/gallery";
+@import "blocks/subscribe";
+@import "blocks/work";
+@import "blocks/footer";
+@import "blocks/nav";
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  margin: 0;
+  font-family: "Gill Sans", Montserrat, sans-serif;
+}
+
+.no-scroll {
+  overflow: hidden;
 }

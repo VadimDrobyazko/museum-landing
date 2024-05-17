@@ -1,0 +1,46 @@
+@mixin on-table {
+  @media (min-width: 690px) {
+    @content;
+  }
+}
+
+@mixin on-desktop {
+  @media (min-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin on-design {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin ff-plexsans {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+@mixin ff-montserrat {
+  font-family: "Gill Sans", Montserrat, sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+@mixin grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+
+  @include on-table {
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 30px;
+  }
+
+  @include on-desktop {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
